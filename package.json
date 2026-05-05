@@ -1,0 +1,26 @@
+{
+  "name": "versus-web-games",
+  "version": "1.0.0",
+  "description": "A collection of online web games to verse your friends in",
+  "homepage": "https://github.com/dcpais/versus-web-games#readme",
+  "bugs": {
+    "url": "https://github.com/dcpais/versus-web-games/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcpais/versus-web-games.git"
+  },
+  "license": "ISC",
+  "author": "dcpais",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -c \"RED,BLUE\" -n \"backend,frontend\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && uv sync && uv run main.py",
+    "frontend": "cd frontend && npm install && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
